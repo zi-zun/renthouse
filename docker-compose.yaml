@@ -1,0 +1,44 @@
+version: "3.5"
+
+services:
+  mysql:
+    image: mysql:9.0.1
+    ports:
+      - "3306"
+    volumes:
+      - "./init/mysql/:/docker-entrypoint-initdb.d/"
+    environment:
+      # mysql密码
+      - MYSQL_ROOT_PASSWORD=123456
+    command:
+      [
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_unicode_ci",
+      ]
+    networks:
+      renthouse_net:
+        ipv4_address: 10.2.1.1
+    container_name: "renthouse-mysql"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mysql
+    ports:
+      - "9801:80"
+    environment:
+      - PMA_HOST=10.2.1.1
+      - PMA_USER=root
+      - PMA_PASSWORD=123456
+    networks:
+      - renthouse_net
+    container_name: "renthouse-phpmyadmin"
+
+networks:
+  renthouse_net:
+    driver: bridge
+    name: renthouse_net
+    ipam:
+      config:
+        # 子网络
+        - subnet: 10.2.0.0/16

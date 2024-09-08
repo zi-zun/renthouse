@@ -1,0 +1,21 @@
+#Editor or system directories and files
+.idea/
+.DS_Store/
+__pycache__/
+.vscode/
+
+#test files
+.pytest_cache/
+.cache
+__pycache__
+*/__pycache__
+*/*/__pycache__
+*.pyc
+*/*.pyc
+*/*/*.pyc
+
+# local env files
+local/init/data
+log/*.log
+log/*.log.*
+tmp/
