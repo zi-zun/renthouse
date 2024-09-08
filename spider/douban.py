@@ -64,7 +64,7 @@ class DouBan(object):
             "Sec-Fetch-Mode": "navigate",
             "Sec-Fetch-User": "?1",
             "Referer": "https://www.douban.com/group/",
-            #'Accept-Encoding': 'gzip, deflate, br',
+            # 'Accept-Encoding': 'gzip, deflate, br',
             "Accept-Encoding": "",
             "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
             "Cookie": self.cookies_,
