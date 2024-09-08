@@ -178,7 +178,6 @@ class DouBan(object):
         return
 
     def spider_topic_detail(self, topic):
-        results = []
         topic_url = topic.get("url")
 
         if self.check_has_topic(topic_url):
