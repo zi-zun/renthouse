@@ -329,17 +329,11 @@ class DouBan(object):
 
 def main(city):
     cookies = config.cookies
-    if city == "beijing":
-        groups = config.beijing_groups
-        locations = config.locations
-        house = config.house
-    elif city == "shanghai":
-        groups = config.shanghai_groups
-        locations = config.locations
-        house = config.house
-    else:
-        print("暂不支持该城市！")
 
+    groups = getattr(config, f"{city}_groups")
+    locations = getattr(config, f"{city}_locations")
+    house = getattr(config, f"{city}_house")
+        
     douban = DouBan(cookies, groups, locations, house, city)
     douban.run()
 

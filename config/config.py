@@ -12,7 +12,15 @@ beijing_groups = [
     "opking",
 ]
 
-# put your goups here
+# set yourself location keywords
+beijing_locations = [
+    "学院路地铁口",
+]
+
+# set yourself house type
+beijing_house = ["一室"]
+
+
 shanghai_groups = [
     "shanghaizufang",
     "383972",
@@ -21,28 +29,9 @@ shanghai_groups = [
 ]
 
 # set yourself location keywords
-locations = [
+shanghai_locations = [
     "学院路地铁口",
-    "华星",
-    "支付宝",
-    "黄龙",
-    "古翠路",
-    "丰潭路地铁",
-    "庆隆苑",
-    "大悦城",
-    "庆云居",
-    "翠苑",
-    "杭州公馆",
-    "学院",
-    "枫华府第",
-    "星光城",
-    "创业大厦",
-    "嘉绿苑",
-    "嘉绿名苑",
-    "九莲",
-    "天堂软件园",
-    "西湖国际",
 ]
 
 # set yourself house type
-house = ["一室"]
+shanghai_house = ["一室"]
